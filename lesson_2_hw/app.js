@@ -106,7 +106,6 @@ app.get('/users/:id', ({params: {id}}, res) => {
         return;
     }
 
-
     res.render('userInfo', user);
 });
 
