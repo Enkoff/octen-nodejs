@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            background-color: cornflowerblue;
+        }
+        .usersWrapper {
+            display: flex;
+        }
+        .user {
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            padding: 50px;
+            border-radius: 20px;
+            background-color: white;
+        }
+    </style>
+    <title>Users</title>
+</head>
+<body>
+
+<div class="usersWrapper">
+    {{#each users}}
+        <div class="user">
+            <h3>{{this.firstName}} {{this.lastName}}</h3>
+            <form class="form" action="/users/{{this.id}}">
+                <input type="submit" value="info">
+            </form>
+        </div>
+    {{/each}}
+</div>
+
+</body>
+</html>
