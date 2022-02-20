@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        body {
+            background-color: cornflowerblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form input {
+            width: 15rem;
+            margin-bottom: 5px;
+        }
+    </style>
+    <title>Sign In</title>
+</head>
+<body>
+
+<h1>Sign in</h1>
+<form action="/signIn" method="post">
+    <input type="email" name="email" placeholder="email"/>
+    <input type="password" name="password" placeholder="password"/>
+    <button type="submit" value="submit">Send</button>
+</form>
+
+</body>
+</html>
